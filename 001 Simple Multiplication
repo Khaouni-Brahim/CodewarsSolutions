@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CodeWars1
+{
+    internal class Program
+    {
+
+        static int ReadNumber()
+        {
+            int Number;
+            Console.WriteLine("Please enter a number ? ");
+            Number = int.Parse(Console.ReadLine());
+            return Number;
+        }
+        static bool IsEven(int Number)
+        {
+            return Number % 2 == 0;
+        }
+        static void Main(string[] args)
+        {
+            int Number = ReadNumber();
+            if (IsEven(Number))
+            {
+                Console.WriteLine(Number * 8);
+            }
+            else
+            {
+                Console.WriteLine(Number * 9);
+
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
