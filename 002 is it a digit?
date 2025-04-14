@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+
+namespace CodeWars1
+{
+    internal class Program
+    {
+
+        static string ReadText()
+        {
+            string S;
+            Console.WriteLine("Please enter text ? ");
+            S = Console.ReadLine();
+            return S;
+        }
+        static bool IsDigit(string S1)
+        {
+            if (!string.IsNullOrEmpty(S1) && S1.Length == 1)
+            {
+                return char.IsDigit(S1[0]);
+            }
+
+            return false;
+        }
+
+        static void Main(string[] args)
+        {
+            string s =ReadText();
+            if (IsDigit(s))
+            {
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
+
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
